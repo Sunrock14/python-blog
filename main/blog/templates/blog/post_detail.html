@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Gönderi Detayı - Blog{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Gönderi Detayı</h1>
+<div class="card">
+    <div class="card-body">
+        <h2 class="card-title">Gönderi Başlığı</h2>
+        <p class="card-text">Bu, gönderi ID'si {{ post_id }} olan bir blog gönderisidir.</p>
+        <p class="text-muted">Yazar: <a href="{% url 'author_posts' author='ornek_yazar' %}">Örnek Yazar</a></p>
+        <p class="text-muted">Kategori: <a href="{% url 'category_posts' category='ornek_kategori' %}">Örnek Kategori</a></p>
+    </div>
+</div>
+{% endblock %}

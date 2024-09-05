@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}{{ author }} Yazarının Gönderileri - Blog{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">{{ author }} Yazarının Gönderileri</h1>
+<div class="row">
+    <!-- Örnek yazar gönderileri -->
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ author }} Gönderisi 1</h5>
+                <p class="card-text">Bu bir örnek yazar gönderisidir.</p>
+                <a href="{% url 'post_detail' post_id=1 %}" class="btn btn-primary">Devamını Oku</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

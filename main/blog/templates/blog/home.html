@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Ana Sayfa - Blog{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Blog Ana Sayfası</h1>
+<div class="row">
+    <!-- Örnek blog gönderileri -->
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Blog Gönderisi 1</h5>
+                <p class="card-text">Bu bir örnek blog gönderisidir.</p>
+                <a href="{% url 'post_detail' post_id=1 %}" class="btn btn-primary">Devamını Oku</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Blog Gönderisi 2</h5>
+                <p class="card-text">Bu başka bir örnek blog gönderisidir.</p>
+                <a href="{% url 'post_detail' post_id=2 %}" class="btn btn-primary">Devamını Oku</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
